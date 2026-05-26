@@ -41,7 +41,7 @@ var __TWCNL = {};
         if (Game.prefs.numbercnfixlen) {
           return (
             (Math.floor(val * prec) / prec)
-              .toFixed(Game.prefs.numbercndecimallen)
+              .toFixed(Math.log10(prec))
               .replace(/\B(?=(\d{4})+(?!\d))/g, '\u2008') + unit
           );
         } else {

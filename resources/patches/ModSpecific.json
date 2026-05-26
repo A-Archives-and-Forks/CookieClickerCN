@@ -178,7 +178,7 @@
     "chinese": "数字长度"
   },
   "[CCCN]SETTING_SCILEN_LABEL": {
-    "chinese": "可以调整数字显示的长度，普通数字和科学计数法均会被影响"
+    "chinese": "可以调整科学计数法数字显示的长度"
   },
   "[CCCN]SETTING_FIXLEN": {
     "chinese": "固定小数位数"
