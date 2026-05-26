@@ -1,23 +1,23 @@
 {
   "devDependencies": {
     "@types/lodash": "^4.14.172",
-    "@types/node": "^16.6.1",
-    "typescript": "^4.3.5"
+    "@types/node": "^16.6.1"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "opencc-js": "^1.0.5",
-    "puppeteer-core": "^24.11.2"
+    "puppeteer-core": "^24.11.2",
+    "subset-font": "^2.5.0"
   },
   "name": "clicker-cn",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "build": "npx tsc --skipLibCheck",
-    "start": "node dist/index.js",
-    "extract": "node dist/extractor.js",
-    "apply": "node dist/install.js"
+    "start": "bun run src/index.ts && bun run scripts/subsetFonts.ts",
+    "extract": "bun run src/extractor.ts",
+    "apply": "bun run src/install.ts",
+    "subset": "bun run scripts/subsetFonts.ts"
   },
   "author": "",
   "license": "ISC",

@@ -2196,6 +2196,7 @@ var __TWCNL = {};
 
       BeautifyAll();
       this.toggleBrandCookies();
+      this.toggleFonts();
     },
     toggleBrandCookies: function () {
       const data =

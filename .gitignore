@@ -3,6 +3,10 @@ node_modules
 dist/
 build/
 
+# Generated subset fonts (run `npm run subset` to regenerate)
+resources/static_chs/SourceHanSerifSC-VF.otf.woff2
+resources/static_cht/SourceHanSerifTC-VF.otf.woff2
+
 .vscode
 .env
 .DS_Store

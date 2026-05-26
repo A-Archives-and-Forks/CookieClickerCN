@@ -12,7 +12,7 @@ interface LangDescription {
   chinese: string | string[];
 }
 
-const GAMEPATH = path.join(process.env.COOKIECLICKER_PATH, 'resources/app/src/index.html');
+const GAMEPATH = path.join(process.env.COOKIECLICKER_PATH!, 'resources/app/src/index.html');
 const SOURCES = [
   'resources/app/src/main.js',
   'resources/app/src/minigameGarden.js',
@@ -20,7 +20,7 @@ const SOURCES = [
   'resources/app/src/minigameMarket.js',
   'resources/app/src/minigamePantheon.js',
   'resources/app/steam/steam.js',
-].map(s => path.join(process.env.COOKIECLICKER_PATH, s));
+].map(s => path.join(process.env.COOKIECLICKER_PATH!, s));
 
 // read game version
 const version = fs.readFileSync(GAMEPATH, { encoding: 'utf-8' }).match(/var VERSION=(.*);/);
@@ -37,9 +37,9 @@ const langData: { [lang: string]: LangFile } = {};
 };
 
 // load official translations
-const EN_LANGPATH = path.join(process.env.COOKIECLICKER_PATH, 'resources/app/src/loc/EN.js');
+const EN_LANGPATH = path.join(process.env.COOKIECLICKER_PATH!, 'resources/app/src/loc/EN.js');
 require(EN_LANGPATH);
-const ZH_LANGPATH = path.join(process.env.COOKIECLICKER_PATH, 'resources/app/src/loc/ZH-CN.js');
+const ZH_LANGPATH = path.join(process.env.COOKIECLICKER_PATH!, 'resources/app/src/loc/ZH-CN.js');
 require(ZH_LANGPATH);
 
 const LANG_DESC: { [key: string]: LangDescription } = {};
@@ -75,7 +75,7 @@ for (const source of SOURCES) {
 
   const loc = (s: string) => plains.push(s);
 
-  for (const match of matches) {
+  for (const match of matches!) {
     eval(match);
   }
 }
